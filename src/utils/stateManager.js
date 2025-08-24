@@ -10,6 +10,16 @@ const DEFAULT_STATE = {
 
 function readState() {
   try {
+    if (!fs.existsSync(stateFilePath)) {
+      // Ensure directory exists
+      fs.mkdirSync(require("path").dirname(stateFilePath), { recursive: true });
+      fs.writeFileSync(
+        stateFilePath,
+        JSON.stringify(DEFAULT_STATE, null, 2),
+        "utf8"
+      );
+      return JSON.parse(JSON.stringify(DEFAULT_STATE));
+    }
     const raw = fs.readFileSync(stateFilePath, "utf8");
     const parsed = JSON.parse(raw);
     // Validate keys
