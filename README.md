@@ -34,7 +34,7 @@ The goal: Provide a Pi value for computing circumferences of celestial bodies (S
 project-root/
 ├── src/
 │   ├── services/
-│   │   └── piCalculator.js      # Leibniz calculation logic
+│   │   └── piCalculatorServices.js      # Leibniz calculation logic
 │   ├── utils/
 │   │   └── stateManager.js      # Read/write state.json
 │   └── config/
@@ -42,8 +42,11 @@ project-root/
 ├── state/
 │   └── state.json               # Persistent state
 ├── docs/
-│   └── architecture.md          # System design notes
+│   └── screenshots/             # Screenshots of test evidence
 ├── server.js                    # Express server entry point
+├── .gitignore
+├── .nodemonignore
+├── package-lock.json
 ├── package.json
 └── README.md
 ```
@@ -55,7 +58,7 @@ project-root/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/naluri-space-pi.git
+git clone https://github.com/hrluqman/naluri-space-pi.git
 cd naluri-space-pi
 ```
 
@@ -178,8 +181,8 @@ Send POST to `/control` with:
 
 ```json
 "scripts": {
-  "start": "node server.js",
-  "dev": "nodemon --ignore state/* server.js"
+  "dev": "nodemon server.js",
+  "start": "node server.js"
 }
 ```
 
