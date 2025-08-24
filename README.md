@@ -1,6 +1,6 @@
-# naluri-space-pi
+# Naluri Space Pi
 
-A Node.js backend service that calculates the value of **\u03c0 (pi)** using the **Leibniz formula** and exposes endpoints to control and monitor the calculation process.
+A Node.js backend service that calculates the value of **π (pi)** using the **Leibniz formula** and exposes endpoints to control and monitor the calculation process.
 
 The goal: Provide a Pi value for computing circumferences of celestial bodies (Sun, Earth, Moon), following the BDD requirements in the assessment.
 
@@ -141,17 +141,7 @@ npm start
 
 ---
 
-### 2. **Check Status**
-
-* Method: **GET**
-* URL: `http://localhost:3001/status`
-
-**Example Screenshot:**
-![Status Response in Postman](docs/screenshots/status-postman.png)
-
----
-
-### 3. **Pause / Stop / Reset**
+### 2. **Pause / Stop / Reset**
 
 Send POST to `/control` with:
 
@@ -162,14 +152,24 @@ Send POST to `/control` with:
 ```
 
 **Example Screenshot:**
-![Pause Action in Postman](docs/screenshots/pause-postman.png)
+![Pause Action in Postman](docs/screenshots/stop-postman.png)
+
+---
+
+### 3. **Check Status**
+
+* Method: **GET**
+* URL: `http://localhost:3001/status`
+
+**Example Screenshot:**
+![Status Response in Postman](docs/screenshots/status-postman.png)
 
 ---
 
 ## **How the Calculation Works**
 
 * Each iteration computes one term of the Leibniz series: `(-1)^k / (2k+1)`.
-* The sum is multiplied by 4 to get the current approximation of \u03c0.
+* The sum is multiplied by 4 to get the current approximation of π.
 * Progress is saved to `state.json` after each iteration for persistence.
 
 ---
