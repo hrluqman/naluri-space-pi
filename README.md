@@ -36,14 +36,14 @@ project-root/
 │   ├── services/
 │   │   └── piCalculatorServices.js      # Leibniz calculation logic
 │   ├── utils/
-│   │   └── stateManager.js      # Read/write state.json
+│   │   └── stateManager.js              # Read/write state.json
 │   └── config/
-│       └── index.js             # App configuration
+│       └── index.js                     # App configuration
 ├── state/
-│   └── state.json               # Persistent state
+│   └── state.json                       # Persistent state
 ├── docs/
-│   └── screenshots/             # Screenshots of test evidence
-├── server.js                    # Express server entry point
+│   └── screenshots/                     # Screenshots of test evidence
+├── server.js                            # Express server entry point
 ├── .gitignore
 ├── .nodemonignore
 ├── package-lock.json
@@ -190,6 +190,5 @@ Send POST to `/control` with:
 
 ## **Future Enhancements**
 
-* Add `/restart` endpoint for explicit fresh start.
 * Migrate from JSON file to Redis or database for state persistence.
-* Implement WebSocket to stream live updates to the frontend.
+* Further classify components into domain-based modules.
