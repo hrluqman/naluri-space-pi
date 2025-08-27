@@ -7,5 +7,5 @@ module.exports = {
   // Persisted state JSON file path (project-root/state/state.json)
   stateFilePath: path.join(process.cwd(), 'state', 'state.json'),
   // Interval for Pi iterations (milliseconds). Increase/decrease for speed.
-  iterationIntervalMs: 2000
+  iterationIntervalMs: 1000
 };
